@@ -26,7 +26,7 @@ const MenuItem = ({ item }: Props) => {
     <motion.li
       className='flex items-center cursor-pointer'
       variants={variants}
-      whileHover={{ x: -5 }}
+      whileHover={{ x: 5 }}
       whileTap={{ scale: 0.95 }}
     >
       <div className="w-16 h-16 rounded-md mr-[10px] font-bold flex items-center justify-center text-lg font-mono text-primary-400 select-none">
