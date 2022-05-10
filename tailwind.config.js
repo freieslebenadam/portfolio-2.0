@@ -1,6 +1,11 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 const colors = require("tailwindcss/colors")
 
+const slate = {
+  ...colors.slate,
+  "850": "#141f38"
+}
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -21,7 +26,7 @@ module.exports = {
           ...colors.sky
         },
         secondary: {
-          ...colors.slate
+          ...slate
         },
         dim: {
           "50":   "rgba(0,0,0,0.05)",
@@ -48,9 +53,12 @@ module.exports = {
           "900":  "rgba(255,255,255,0.90)",
         },
       },
+      transitionProperty: {
+        "backdrop": "backdrop-filter"
+      },
       keyframes: {
         fadeIn: {
-	  "0%": { opacity: 0 },
+	        "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
       },

@@ -28,7 +28,8 @@
       "@lib": ["lib"],
       "@lib/*": ["lib/*"],
       "@utils": ["utils"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@tailwind-config": ["tailwind.config"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
