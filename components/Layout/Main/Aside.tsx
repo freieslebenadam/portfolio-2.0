@@ -8,11 +8,12 @@ type Props = {
 } & ChildrenProps
 
 const Aside = ({ children, position }: Props) => {
-  const positionStyle = position === "left" ? ({ left: 0 }) : ({ right: 0 })
+  const positionStyle = position === "left" ? ({ left: 10 }) : ({ right: 10 })
 
   return (
-    <aside className='fixed w-24 flex flex-col items-center bottom-0 bg-dim-500' style={positionStyle}>
+    <aside className='hidden fixed w-14 md:flex flex-col items-center bottom-0 gap-2 xl:px-20' style={positionStyle}>
       {children}
+      <div className='w-[2px] bg-secondary-600 h-28 flex-none' />
     </aside>
   )
 }
