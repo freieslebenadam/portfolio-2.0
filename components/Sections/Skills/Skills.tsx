@@ -53,7 +53,7 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("frontend")
 
   return (
-    <div className='max-w-2xl mx-auto pb-5 pt-2'>
+    <div className='max-w-2xl mx-auto min-h-[80vh]'>
       <Section id='02' title='What I can do' path='skills' >
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, fuga? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, quae.</p>
         <div className='flex flex-col my-10'>
