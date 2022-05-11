@@ -1,48 +1,64 @@
 import Section from '@components/Section'
-import React from 'react'
-import { SiTypescript, SiHtml5, SiCss3, SiJavascript, SiReact, SiNextdotjs, SiSass, SiTailwindcss, SiGatsby } from 'react-icons/si'
-import SkillItem from './SkillItem'
+import { ITab } from '@interfaces'
+import React, { useState } from 'react'
+import { SiTypescript, SiHtml5, SiCss3, SiJavascript, SiReact, SiNextdotjs, SiSass, SiTailwindcss, SiGatsby, SiPhp, SiMysql, SiSymfony, SiPostgresql, SiNestjs, SiCsharp, SiNodedotjs, SiNpm, SiComposer, SiGit, SiJirasoftware } from 'react-icons/si'
+import SkillsTabContext from './SkillsTabContext'
+import SkillsTabs from './SkillsTabs'
 
-const skills = {
-  fontEnd: [
-    { id: 1, title: "HTML5", icon: <SiHtml5 /> },
-    { id: 2, title: "CSS3", icon: <SiCss3 /> },
-    { id: 3, title: "JavaScript (ES6+)", icon: <SiJavascript /> },
-    { id: 4, title: "TypeScript", icon: <SiTypescript /> },
-    { id: 5, title: "React", icon: <SiReact /> },
-    { id: 6, title: "SASS", icon: <SiSass /> },
-    { id: 7, title: "Gatsby", icon: <SiGatsby /> },
-    { id: 8, title: "Tailwind", icon: <SiTailwindcss /> },
-    { id: 9, title: "Next.js", icon: <SiNextdotjs /> },
-  ],
-  backEnd: [
-
-  ],
-  other: [
-
-  ]
-}
+const tabs: ITab[] = [
+  { 
+    id: 1,
+    name: "frontend", 
+    title: "Front-End", 
+    items: [
+      { id: 1, title: "HTML5", icon: <SiHtml5 /> },
+      { id: 2, title: "CSS3", icon: <SiCss3 /> },
+      { id: 3, title: "JavaScript (ES6+)", icon: <SiJavascript /> },
+      { id: 4, title: "TypeScript", icon: <SiTypescript /> },
+      { id: 5, title: "React", icon: <SiReact /> },
+      { id: 6, title: "SASS", icon: <SiSass /> },
+      { id: 7, title: "Gatsby", icon: <SiGatsby /> },
+      { id: 8, title: "Tailwind", icon: <SiTailwindcss /> },
+      { id: 9, title: "Next.js", icon: <SiNextdotjs /> },
+    ] 
+  },
+  {
+    id: 2,
+    name: "backend",
+    title: "Back-End",
+    items: [
+      { id: 10, title: "PHP5", icon: <SiPhp /> },
+      { id: 11, title: "MySQL", icon: <SiMysql /> },
+      { id: 12, title: "Symfony", icon: <SiSymfony /> },
+      { id: 13, title: "Node.js", icon: <SiNodedotjs /> },
+      { id: 14, title: "Postgres", icon: <SiPostgresql /> },
+      { id: 15, title: "NestJs", icon: <SiNestjs /> },
+    ]
+  },
+  {
+    id: 3,
+    name: "other",
+    title: "Other",
+    items: [
+      { id: 16, title: "C#", icon: <SiCsharp /> },
+      { id: 17, title: "npm", icon: <SiNpm /> },
+      { id: 18, title: "Composer", icon: <SiComposer /> },
+      { id: 19, title: "Git", icon: <SiGit /> },
+      { id: 20, title: "Jira", icon: <SiJirasoftware /> },
+    ]
+  }
+]
 
 const Skills = () => {
+  const [activeTab, setActiveTab] = useState("frontend")
+
   return (
     <div className='max-w-2xl mx-auto pb-5 pt-2'>
       <Section id='02' title='What I can do' path='skills' >
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, fuga? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, quae.</p>
         <div className='flex flex-col my-10'>
-          <div className='flex-none w-full flex gap-5'>
-            <div className='flex-auto border-b-2 border-secondary-400 flex items-center justify-center py-2 transition-all hover:border-primary-400 rounded-t'>
-              <h5 className='font-mono font-medium text-primary-400'>Front-End</h5>
-            </div>
-            <div className='flex-auto border-b-2 border-secondary-400 flex items-center justify-center py-2 transition-all hover:border-primary-400 rounded-t'>
-              <h5 className='font-mono font-medium text-primary-400'>Back-End</h5>
-            </div>
-            <div className='flex-auto border-b-2 border-secondary-400 flex items-center justify-center py-2 transition-all hover:border-primary-400 rounded-t'>
-              <h5 className='font-mono font-medium text-primary-400'>Other</h5>
-            </div>
-          </div>
-          <div className='flex-auto mt-5 grid grid-cols-2 gap-2 flex-wrap'>
-            {skills.fontEnd.map((fe,index) => <SkillItem key={fe.id} span={index === skills.fontEnd.length-1 ? 2 : 1} title={fe.title} icon={fe.icon} />)}
-          </div>
+          <SkillsTabs tabs={tabs} changeTab={setActiveTab} activeTab={activeTab} />
+          <SkillsTabContext items={tabs.find(tab => tab.name === activeTab)?.items} />
         </div>
       </Section>
     </div>
