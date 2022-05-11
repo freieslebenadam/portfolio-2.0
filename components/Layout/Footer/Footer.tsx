@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='mx-auto py-2 font-mono font-medium text-bland-500 text-sm'>
+    <footer className='bg-gradient-to-b from-transparent to-dim-200 text-center py-10 font-mono font-medium text-bland-500 text-sm'>
       &copy; {(new Date()).getFullYear()} Adam Freiesleben
     </footer>
   )

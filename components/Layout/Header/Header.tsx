@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 const Header = () =>{
   return (
-    <header className='px-6 h-24 flex items-center bg-dim-100'>
+    <header className='bg-gradient-to-t from-transparent to-dim-200 px-6 h-24 flex items-center'>
       <div className="flex items-center justify-between flex-auto h-12">
         <div className='flex-none h-full w-12 flex justify-center items-center'>
           <Link href={`/`}>
