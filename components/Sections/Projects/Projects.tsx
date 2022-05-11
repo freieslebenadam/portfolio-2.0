@@ -3,6 +3,8 @@ import React from 'react'
 import ProjectPanel from './ProjectPanel'
 
 const Projects = () => {
+  // TODO: Redesign for mobile devices
+
   return (
     <Section id='03' title='Some of my work' path='projects' >
       <ProjectPanel 
