@@ -30,7 +30,7 @@ const ProjectPanel = ({ imgSrc, title, description, tech, links, reverse = false
           <p className='px-5 py-10 bg-secondary-850 rounded-md shadow-md font-medium'>{description}</p>
         </div>
         <ul className='flex gap-5 w-max'>
-          {tech.map(t => <li className='font-mono text-sm'>{t}</li>)}
+          {tech.map((t,index) => <li key={index} className='font-mono text-sm'>{t}</li>)}
         </ul>
         <div className='flex pt-5 gap-5 w-max'>
           <a href={links.github} target="_blank" className='transition-all hover:text-primary-400'>
