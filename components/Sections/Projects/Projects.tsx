@@ -5,7 +5,8 @@ import ProjectPanel from './ProjectPanel'
 const Projects = () => {
   return (
     <Section id='03' title='Some of my work' path='projects' >
-      <ProjectPanel title="Short.me"
+      <ProjectPanel 
+        title="Short.me"
         imgSrc="/images/project1.jpg"
         description="A simple application for making shorter aliases for longer http links."
         tech={["Next.js", "React", "Supabase", "Tailwind"]}
@@ -14,7 +15,8 @@ const Projects = () => {
           web: "https://short-me-one.vercel.app/" 
         }}
       />
-      <ProjectPanel title="Code Snippets"
+      <ProjectPanel reverse
+        title="Code Snippets"
         imgSrc="/images/project3.jpg"
         description="A simple application for making shorter aliases for longer http links."
         tech={["Next.js", "React", "Supabase", "Tailwind"]}

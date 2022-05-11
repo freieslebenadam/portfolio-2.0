@@ -9,16 +9,18 @@ type Props = {
 
 const DesktopMenuNavItem = ({ item }: Props) => {
   return (
-    <Link href={item.path} passHref>
-      <motion.li className='flex gap-1 cursor-pointer group select-none' whileHover={{ y: -3 }}>
+    <motion.li className='flex gap-1 cursor-pointer group select-none' whileHover={{ y: -3 }}>
+      <Link href={item.path}>
+        <a>
           <span className='font-medium font-mono text-primary-400'>
             {item.id}.
           </span>
           <span className='transition-all group-hover:text-primary-400'>
             {item.title}
           </span>
-      </motion.li>
-    </Link>
+        </a>
+      </Link>
+    </motion.li>
   )
 }
 
