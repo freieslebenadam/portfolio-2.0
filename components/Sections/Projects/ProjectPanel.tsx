@@ -42,20 +42,22 @@ const ProjectPanel = ({ imgSrc, title, description, tech, links, reverse = false
         </div>
       </div>
       <Link href={links.web} passHref target="_blank">
-        <motion.a target="_blank"
-          whileHover={{ filter: "grayscale(0)" }}
+        <a target="_blank"
           className={classNames(
-            'absolute top-[50%] -translate-y-[50%] h-[75%] bottom-0 left-0 w-full rounded shadow-md z-10 transition-all bg-primary-400 grayscale mix-blend-overlay hover:mix-blend-normal duration-200 cursor-pointer col-start-1 col-end-auto',
+            'absolute top-[50%] -translate-y-[50%] h-[75%] bottom-0 left-0 w-full rounded shadow-md z-10 cursor-pointer col-start-1 col-end-auto group',
             reverse ? "sm:col-start-6 sm:col-end-13" : "sm:col-start-1 sm:col-end-8"
         )}>
-          <Image
-            className='rounded shadow-md'
-            src={imgSrc}
-            layout="fill"
-            objectFit='cover'
-            objectPosition="center"
-          />
-        </motion.a>
+          <div className='absolute top-0 bottom-0 right-0 left-0 bg-primary-500 opacity-30 transition-all duration-200 group-hover:opacity-0 z-10 rounded' />
+          <div className='absolute top-0 bottom-0 right-0 left-0 transition-all duration-200 grayscale group-hover:grayscale-0'>
+            <Image
+              className='rounded shadow-md'
+              src={imgSrc}
+              layout="fill"
+              objectFit='cover'
+              objectPosition="center"
+            />
+          </div>
+        </a>
       </Link>
     </div>
   )
