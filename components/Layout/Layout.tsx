@@ -6,7 +6,7 @@ import { Footer } from './Footer'
 
 const Layout = ({ children }: ChildrenProps) => {
   return (
-    <div className='min-h-screen bg-secondary-900 text-secondary-400 selection:bg-dim-300'>
+    <div className='min-h-screen bg-secondary-900 text-secondary-400 selection:bg-dim-300 overflow-x-hidden'>
       <Header />
 
       <Main>

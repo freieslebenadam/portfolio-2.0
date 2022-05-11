@@ -11,26 +11,28 @@ const aha = [
 
 const About = () => {
   return (
-    <Section id='01' title='About me' path='about' >
-      <div className='flex items-center'>
-        <div className='prose prose-p: text-secondary-400 pr-16'>
-          {aha.map((a,index) => <p className='' key={index}>{a}</p>)}
-        </div>
-        <div className='relative rounded shadow-md w-[305px] h-[305px] group'>
-          <div className='absolute top-0 right-0 left-0 bottom-0 rounded bg-primary-400 opacity-40 group-hover:opacity-0 z-20 transition-all duration-300' />
-          <div className='absolute top-0 right-0 left-0 bottom-0 rounded border-2 border-primary-400 translate-x-5 translate-y-5 group-hover:translate-x-3 group-hover:translate-y-3 transition-all duration-300' />
-          <div className='absolute top-0 right-0 left-0 bottom-0 grayscale rounded group-hover:grayscale-0 transition-all duration-300'>
-            <Image
-              className='rounded shadow-md'
-              src={`https://picsum.photos/320/320`}
-              layout="fill"
-              objectFit='cover'
-              objectPosition="center"
-            />
+    <div className='max-w-[56rem] mx-auto'>
+      <Section id='01' title='About me' path='about' >
+        <div className='flex md:flex-row flex-col items-center my-8'>
+          <div className='text-secondary-400 pr-0 md:pr-16 w-full flex flex-col gap-6 text-center md:text-left'>
+            {aha.map((a,index) => <p key={index}>{a}</p>)}
+          </div>
+          <div className='relative rounded shadow-md my-16 md:m-0 min-w-[285px] min-h-[285px] md:min-w-[185px] md:min-h-[185px] lg:min-w-[305px] lg:min-h-[305px] group'>
+            <div className='absolute top-0 right-0 left-0 bottom-0 rounded bg-primary-400 opacity-40 group-hover:opacity-0 z-20 transition-all duration-300' />
+            <div className='absolute top-0 right-0 left-0 bottom-0 rounded border-2 border-primary-400 translate-x-5 translate-y-5 group-hover:translate-x-3 group-hover:translate-y-3 transition-all duration-300' />
+            <div className='absolute top-0 right-0 left-0 bottom-0 grayscale rounded group-hover:grayscale-0 transition-all duration-300'>
+              <Image
+                className='rounded shadow-md'
+                src={`https://picsum.photos/320/320`}
+                layout="fill"
+                objectFit='cover'
+                objectPosition="center"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </Section>
+      </Section>
+    </div>
   )
 }
 
