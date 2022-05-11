@@ -1,5 +1,4 @@
-import { Button, Layout } from '@components'
-import { About, Contact, Hero, Projects, Skills } from '@components/Sections'
+import { Button } from '@components'
 import type { NextPage } from 'next'
 
 const NotFoundPage: NextPage = () => {
