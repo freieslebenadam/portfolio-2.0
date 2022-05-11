@@ -1,10 +1,37 @@
 import Section from '@components/Section'
 import React from 'react'
+import ProjectPanel from './ProjectPanel'
 
 const Projects = () => {
   return (
     <Section id='03' title='Some of my work' path='projects' >
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus assumenda, magnam ut dolor veniam impedit suscipit vel quia aliquam optio sed voluptatem nisi cumque, temporibus consequuntur incidunt, deleniti porro placeat minus quos beatae non exercitationem! Blanditiis nulla quidem quos, atque libero quae accusamus rerum necessitatibus. Aspernatur vitae neque enim exercitationem beatae! Quos est provident quisquam sapiente, odio rem nisi nemo velit excepturi porro eius hic, ipsum tenetur reprehenderit magni esse itaque sed quia voluptates veritatis delectus perspiciatis incidunt a quod?
+      <ProjectPanel title="Short.me"
+        imgSrc="/images/project1.jpg"
+        description="A simple application for making shorter aliases for longer http links."
+        tech={["Next.js", "React", "Supabase", "Tailwind"]}
+        links={{ 
+          github: "https://github.com/freieslebenadam/shortener", 
+          web: "https://short-me-one.vercel.app/" 
+        }}
+      />
+      <ProjectPanel title="Code Snippets"
+        imgSrc="/images/project3.jpg"
+        description="A simple application for making shorter aliases for longer http links."
+        tech={["Next.js", "React", "Supabase", "Tailwind"]}
+        links={{ 
+          github: "https://github.com/freieslebenadam/shortener", 
+          web: "https://short-me-one.vercel.app/" 
+        }}
+      />
+      <ProjectPanel title="Divider"
+        imgSrc="/images/project2.jpg"
+        description="A simple application for making shorter aliases for longer http links."
+        tech={["Next.js", "React", "Supabase", "Tailwind"]}
+        links={{ 
+          github: "https://github.com/freieslebenadam/shortener", 
+          web: "https://short-me-one.vercel.app/" 
+        }}
+      />
     </Section>
   )
 }
