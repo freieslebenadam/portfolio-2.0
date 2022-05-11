@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { INavItem } from '@interfaces'
+import Link from 'next/link'
 
 const variants = {
   open: {
@@ -19,23 +21,25 @@ const variants = {
 }
 
 type Props = {
-  item: any
+  item: INavItem
 }
 const MenuItem = ({ item }: Props) => {
   return (
-    <motion.li
-      className='flex items-center cursor-pointer'
-      variants={variants}
-      whileHover={{ x: 5 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <div className="w-16 h-16 rounded-md mr-[10px] font-bold flex items-center justify-center text-lg font-mono text-primary-400 select-none">
-        {item.id}
-      </div>
-      <div className="rounded-md h-16 flex-1 flex items-center text-lg transition-all hover:text-primary-400 font-light hover:font-medium text-secondary-200 select-none">
-        {item.title}
-      </div>
-    </motion.li>
+    <Link href={item.path} passHref>
+      <motion.li
+        className='flex items-center cursor-pointer'
+        variants={variants}
+        whileHover={{ x: 5 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <div className="w-16 h-16 rounded-md font-bold flex items-center justify-center text-lg font-mono text-primary-400 select-none">
+          {item.id}.
+        </div>
+        <div className="rounded-md h-16 flex-1 flex items-center text-lg transition-all hover:text-primary-400 font-light hover:font-medium text-secondary-200 select-none">
+          {item.title}
+        </div>
+      </motion.li>
+    </Link>
   )
 }
 

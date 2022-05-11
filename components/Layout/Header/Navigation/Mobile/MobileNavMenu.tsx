@@ -14,7 +14,7 @@ const variants = {
 
 const MobileNavMenu = () => {
   return (
-    <motion.ul variants={variants} className="aboslute top-0 left-0 h-full right-0 px-12 flex flex-col justify-center gap-6">
+    <motion.ul variants={variants} className="aboslute top-0 left-0 h-full right-0 px-10 flex flex-col justify-center gap-5">
       {NavItems.map(item => (
         <MenuItem item={item} key={item.id} />
       ))}

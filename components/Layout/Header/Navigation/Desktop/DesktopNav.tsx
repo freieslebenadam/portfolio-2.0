@@ -1,8 +1,11 @@
 import React from 'react'
+import DesktopNavMenu from './DesktopNavMenu'
 
 const DesktopNav = () => {
   return (
-    <div>DesktopNav</div>
+    <div className='hidden h-full md:block'>
+      <DesktopNavMenu />
+    </div>
   )
 }
 

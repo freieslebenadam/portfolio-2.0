@@ -45,7 +45,7 @@ const MobileNav = () => {
         )}
         variants={sidebar}
       >
-        <div className='absolute right-0 top-0 bottom-0 w-96 bg-secondary-850'>
+        <div className='absolute right-0 top-0 bottom-0 min-w-[320px] bg-secondary-850'>
           <MobileNavMenu />
         </div>
       </motion.div>
