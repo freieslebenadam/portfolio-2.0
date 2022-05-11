@@ -1,10 +1,12 @@
+import { Layout } from '@components'
+import { Hero } from '@components/Sections'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      Index
-    </div>
+    <Layout>
+      <Hero />
+    </Layout>
   )
 }
 

@@ -41,7 +41,7 @@ const MobileNav = () => {
       <motion.div 
         className={classNames(
           "absolute shadow-xl right-0 top-0 bottom-0 left-0 z-10 transition-backdrop duration-300",
-          isOpen ? "backdrop-blur-sm" : ""
+          isOpen ? "backdrop-blur-sm backdrop-brightness-90" : ""
         )}
         variants={sidebar}
       >
