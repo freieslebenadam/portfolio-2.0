@@ -1,11 +1,18 @@
-import Section from '@components/Section'
+import Button from '@components/Button'
 import React from 'react'
 
 const Contact = () => {
   return (
-    <Section id='04' title='Get in touch with me' path='contact' >
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus assumenda, magnam ut dolor veniam impedit suscipit vel quia aliquam optio sed voluptatem nisi cumque, temporibus consequuntur incidunt, deleniti porro placeat minus quos beatae non exercitationem! Blanditiis nulla quidem quos, atque libero quae accusamus rerum necessitatibus. Aspernatur vitae neque enim exercitationem beatae! Quos est provident quisquam sapiente, odio rem nisi nemo velit excepturi porro eius hic, ipsum tenetur reprehenderit magni esse itaque sed quia voluptates veritatis delectus perspiciatis incidunt a quod?
-    </Section>
+    <section className='my-48' id='contact'>
+      <article className='flex flex-col items-center text-center'>
+        <h5 className='font-mono font-medium text-primary-400'>04. What's Next?</h5>
+        <h4 className='text-4xl font-bold pt-4 text-secondary-300'>Get In Touch</h4>
+        <p className='leading-7 pt-4 pb-16'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem fugit rem totam libero provident voluptates distinctio doloremque animi aspernatur vitae aspernatur vitae.</p>
+        <Button>
+          Say hello
+        </Button>
+      </article>
+    </section>
   )
 }
 

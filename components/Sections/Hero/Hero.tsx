@@ -1,3 +1,4 @@
+import Button from '@components/Button'
 import React from 'react'
 
 const Hero = () => {
@@ -12,9 +13,9 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, laboriosam voluptates porro eum nesciunt consequuntur, tenetur odit voluptatem dolorum facere omnis! Dolores, dicta unde <span className='pb-1 cursor-pointer border-b border-transparent transition-all hover:border-primary-400 font-semibold text-primary-400'>Lorem</span>.
         </p>
 
-        <button className='text-primary-400 border-primary-400 font-mono py-4 px-6 border-2 rounded-md text-lg font-medium bg-primary-400 bg-opacity-0 transition-all hover:bg-opacity-10'>
+        <Button href='#contact'>
           Get in touch with me!
-        </button>
+        </Button>
       </article>
     </section>
   )

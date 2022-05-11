@@ -9,7 +9,7 @@ type Props = {
 
 const Section = ({ id, path, title, children }: Props) => {
   return (
-    <section id={path} className="my-40">
+    <section id={path} className="my-48">
       <article>
         <h4 className='capitalize flex items-center gap-2'>
           <span className='flex-none font-mono text-primary-400 font-medium text-lg'>{id}.</span>
