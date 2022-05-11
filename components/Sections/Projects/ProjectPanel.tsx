@@ -41,8 +41,8 @@ const ProjectPanel = ({ imgSrc, title, description, tech, links, reverse = false
           </a>
         </div>
       </div>
-      <Link href={links.web} passHref>
-        <motion.div 
+      <Link href={links.web} passHref target="_blank">
+        <motion.a target="_blank"
           whileHover={{ filter: "grayscale(0)" }}
           className={classNames(
             'absolute top-[50%] -translate-y-[50%] h-[75%] bottom-0 left-0 w-full rounded shadow-md z-10 transition-all bg-primary-400 grayscale mix-blend-overlay hover:mix-blend-normal duration-200 cursor-pointer col-start-1 col-end-auto',
@@ -55,7 +55,7 @@ const ProjectPanel = ({ imgSrc, title, description, tech, links, reverse = false
             objectFit='cover'
             objectPosition="center"
           />
-        </motion.div>
+        </motion.a>
       </Link>
     </div>
   )

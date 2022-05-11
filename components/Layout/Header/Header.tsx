@@ -24,10 +24,6 @@ const Header = () =>{
           </Link>
         </div>
 
-        <div>
-          {/* items */}
-        </div>
-
         <Navigation />
       </div>
     </header>
