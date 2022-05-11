@@ -21,8 +21,8 @@ const ProjectPanel = ({ imgSrc, title, description, tech, links, reverse = false
   return (
     <div className='relative grid grid-cols-12 gap-2 mb-24 w-full items-center h-[32rem]'>
       <div className={classNames(
-        'relative col-start-1 z-20 flex flex-col',
-        reverse ? "items-start text-left sm:col-end-5 lg:col-end-7" : "items-end text-right sm:col-start-5 lg:col-start-7 col-end-13"
+        'relative col-start-1 col-end-13 z-20 flex flex-col',
+        reverse ? "items-start text-left sm:col-end-9 lg:col-end-7" : "items-end text-right sm:col-start-5 lg:col-start-7"
       )}>
         <h6 className='text-sm font-mono font-medium text-primary-400 mb-1'>Personal Project</h6>
         <h5 className='text-secondary-300 font-semibold text-2xl'>{title}</h5>
@@ -45,8 +45,8 @@ const ProjectPanel = ({ imgSrc, title, description, tech, links, reverse = false
         <motion.div 
           whileHover={{ filter: "grayscale(0)" }}
           className={classNames(
-            'absolute top-[50%] -translate-y-[50%] h-[75%] bottom-0 left-0 w-full rounded shadow-md z-10 transition-all bg-primary-400 grayscale mix-blend-overlay hover:mix-blend-normal duration-200 cursor-pointer',
-            reverse ? "col-start-6 col-end-13" : "col-start-1 col-end-8"
+            'absolute top-[50%] -translate-y-[50%] h-[75%] bottom-0 left-0 w-full rounded shadow-md z-10 transition-all bg-primary-400 grayscale mix-blend-overlay hover:mix-blend-normal duration-200 cursor-pointer col-start-1 col-end-auto',
+            reverse ? "sm:col-start-6 sm:col-end-13" : "sm:col-start-1 sm:col-end-8"
         )}>
           <Image
             className='rounded shadow-md'
