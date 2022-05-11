@@ -13,7 +13,7 @@ const Main = ({ children }: ChildrenProps) => {
       <Aside position='right'>
         Right aside
       </Aside>
-      <div className='h-screen max-w-5xl w-full mx-12 md:mx-24'>
+      <div className='min-h-screen max-w-5xl w-full mx-12 md:mx-24'>
         {children}
       </div>
     </main>

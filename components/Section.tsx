@@ -16,6 +16,9 @@ const Section = ({ id, path, title, children }: Props) => {
           <span className='flex-none text-2xl font-semibold text-secondary-300'>{title}</span>
           <span className='ml-2 h-[2px] flex-auto bg-secondary-800' />
         </h4>
+        <div className='py-5'>
+          {children}
+        </div>
       </article>
     </section>
   )

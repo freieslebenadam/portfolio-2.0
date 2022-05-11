@@ -1,5 +1,5 @@
 import { Layout } from '@components'
-import { About, Hero } from '@components/Sections'
+import { About, Contact, Hero, Projects, Skills } from '@components/Sections'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
@@ -7,6 +7,9 @@ const Home: NextPage = () => {
     <Layout>
       <Hero />
       <About />
+      <Skills />
+      <Projects />
+      <Contact />
     </Layout>
   )
 }
