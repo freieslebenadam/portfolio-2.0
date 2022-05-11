@@ -10,7 +10,7 @@ type Props = {
 const DesktopMenuNavItem = ({ item }: Props) => {
   return (
     <Link href={item.path} passHref>
-      <motion.li className='flex gap-1 cursor-pointer group' whileHover={{ y: -3 }}>
+      <motion.li className='flex gap-1 cursor-pointer group select-none' whileHover={{ y: -3 }}>
           <span className='font-medium font-mono text-primary-400'>
             {item.id}.
           </span>

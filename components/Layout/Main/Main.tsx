@@ -4,16 +4,16 @@ import Aside from './Aside'
 
 const Main = ({ children }: ChildrenProps) => {
   return (
-    <main className='relative'>
-      <Aside>
-        Hola
+    <main className='relative flex justify-center'>
+      <Aside position='left'>
+        Left aside
       </Aside>
-      <div className='h-screen bg-lighter-50 mx-24'>
+      <Aside position='right'>
+        Right aside
+      </Aside>
+      <div className='h-screen bg-lighter-50 max-w-5xl w-full mx-24'>
         {children}
       </div>
-      <Aside>
-        Hola
-      </Aside>
     </main>
   )
 }
