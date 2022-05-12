@@ -4,6 +4,7 @@ import MobileNavMenu from './MobileNavMenu'
 import { motion, useCycle } from "framer-motion"
 import { useDimensions } from '@hooks'
 import { classNames } from '@utils'
+import { INavItem } from '@interfaces'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -25,7 +26,11 @@ const sidebar = {
   }
 };
 
-const MobileNav = () => {
+type Props = {
+  navItems: INavItem[]
+}
+
+const MobileNav = ({ navItems }: Props) => {
   const [isOpen, toggleOpen] = useCycle(false, true)
   const containerRef = useRef(null)
   const { height } = useDimensions(containerRef)
@@ -46,7 +51,7 @@ const MobileNav = () => {
         variants={sidebar}
       >
         <div className='absolute right-0 top-0 bottom-0 min-w-[320px] bg-secondary-850'>
-          <MobileNavMenu />
+          <MobileNavMenu items={navItems} />
         </div>
       </motion.div>
       <MenuToggle toggle={() => toggleOpen()} />

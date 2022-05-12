@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import MenuItem from './MobileNavMenuItem'
-import { NavItems } from '@lib'
+import { INavItem } from '@interfaces'
 
 const variants = {
   open: {
@@ -12,10 +12,14 @@ const variants = {
   }
 }
 
-const MobileNavMenu = () => {
+type Props = {
+  items: INavItem[]
+}
+
+const MobileNavMenu = ({ items }: Props) => {
   return (
     <motion.ul variants={variants} className="aboslute top-0 left-0 h-full right-0 px-10 flex flex-col justify-center gap-5">
-      {NavItems.map(item => (
+      {items.map(item => (
         <MenuItem item={item} key={item.id} />
       ))}
     </motion.ul>

@@ -1,10 +1,15 @@
+import { INavItem } from '@interfaces'
 import React from 'react'
 import DesktopNavMenu from './DesktopNavMenu'
 
-const DesktopNav = () => {
+type Props = {
+  navItems: INavItem[]
+}
+
+const DesktopNav = ({ navItems }: Props) => {
   return (
     <div className='hidden h-full md:block'>
-      <DesktopNavMenu />
+      <DesktopNavMenu items={navItems} />
     </div>
   )
 }

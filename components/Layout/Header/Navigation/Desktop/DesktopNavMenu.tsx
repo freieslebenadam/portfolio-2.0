@@ -1,11 +1,15 @@
-import { NavItems } from '@lib'
+import { INavItem } from '@interfaces'
 import React from 'react'
 import DesktopNavMenuItem from './DesktopMenuNavItem'
 
-const DesktopNavMenu = () => {
+type Props = {
+  items: INavItem[]
+}
+
+const DesktopNavMenu = ({ items }: Props) => {
   return (
     <ul className='flex gap-8'>
-      {NavItems.map(item => (
+      {items.map(item => (
         <DesktopNavMenuItem key={item.id} item={item} />
       ))}
     </ul>
