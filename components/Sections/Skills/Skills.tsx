@@ -58,7 +58,7 @@ const Skills = () => {
   return (
     <div className='max-w-2xl mx-auto min-h-[80vh]'>
       <Section id='02' title={t.sections.skills.title} path='skills' >
-        <p>{t.sections.skills.description}</p>
+        <p className='font-medium text-secondary-500'>{t.sections.skills.description}</p>
         <div className='flex flex-col my-10'>
           <SkillsTabs tabs={tabs} changeTab={setActiveTab} activeTab={activeTab} />
           <SkillsTabContext items={tabs.find(tab => tab.name === activeTab)?.items} />
