@@ -39,7 +39,7 @@ export interface ITranslation {
     },
     about: {
       title: string,
-      content: string | string[],
+      content: string[],
     },
     skills: {
       title: string,
