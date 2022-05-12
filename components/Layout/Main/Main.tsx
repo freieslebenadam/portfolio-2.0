@@ -3,8 +3,6 @@ import React from 'react'
 import Aside from './Aside'
 import { FiGithub, FiLinkedin } from "react-icons/fi"
 
-//TODO: Implement aside links
-
 const Main = ({ children }: ChildrenProps) => {
   return (
     <main className='relative flex justify-center'>

@@ -19,10 +19,11 @@ const About = () => {
             <div className='absolute top-0 right-0 left-0 bottom-0 grayscale rounded group-hover:grayscale-0 transition-all duration-300'>
               <Image
                 className='rounded shadow-md'
-                src={`https://picsum.photos/320/320`}
+                src={`/images/profilepic.jpeg`}
                 layout="fill"
                 objectFit='cover'
                 objectPosition="center"
+                priority
               />
             </div>
           </div>
