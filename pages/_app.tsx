@@ -1,3 +1,4 @@
+import ContextProvider from '@context'
 import '@styles/globals.css'
 import '@styles/tailwind.css'
 import type { AppProps } from 'next/app'
@@ -5,7 +6,7 @@ import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ContextProvider>
       <Head>
         <title>Adam Freiesleben</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1" />
@@ -19,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <Component {...pageProps} />
-    </>
+    </ContextProvider>
   )
 }
 
