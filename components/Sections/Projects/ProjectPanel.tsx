@@ -30,10 +30,10 @@ const ProjectPanel = ({ imgSrc, title, description, tech, links, reverse = false
         <h6 className='text-sm font-mono font-medium text-primary-400 mb-1'>{t.sections.projects.subtitles}</h6>
         <h5 className='text-secondary-300 font-semibold text-2xl'>{title}</h5>
         <div className='py-5'>
-          <p className='px-10 py-2 sm:py-10 sm:bg-secondary-850 rounded-md shadow-md font-medium'>{description}</p>
+          <p className='px-10 py-2 sm:py-10 sm:bg-secondary-850 rounded-md shadow-md font-medium text-sm sm:text-base'>{description}</p>
         </div>
         <ul className='flex gap-2 sm:gap-5 w-max sm:bg-secondary-900 py-2 px-4 rounded'>
-          {tech.map((t,index) => <li key={index} className='font-mono text-sm'>{t}</li>)}
+          {tech.map((t,index) => <li key={index} className='font-mono text-xs sm:text-sm'>{t}</li>)}
         </ul>
         <div className='flex pt-5 gap-5 w-max'>
           <a href={links.github} target="_blank" className='transition-all hover:text-primary-400'>
