@@ -33,6 +33,7 @@ export interface ITranslation {
     hero: {
       welcome: string,
       title: string,
+      subtitle: string,
       description: string,
       button: string
     },
