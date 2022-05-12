@@ -1,16 +1,17 @@
 import Section from '@components/Section'
+import { useLocale } from '@hooks'
 import React from 'react'
 import ProjectPanel from './ProjectPanel'
 
 const Projects = () => {
-  // TODO: Redesign for mobile devices
+  const {t} = useLocale()
 
   return (
-    <Section id='03' title='Some of my work' path='projects' >
+    <Section id='03' title={t.sections.projects.title} path='projects' >
       <ProjectPanel 
         title="Short.me"
         imgSrc="/images/project1.jpg"
-        description="A simple application for making shorter aliases for longer http links."
+        description={t.sections.projects.shortener.description}
         tech={["Next.js", "React", "Supabase", "Tailwind"]}
         links={{ 
           github: "https://github.com/freieslebenadam/shortener", 
@@ -20,7 +21,7 @@ const Projects = () => {
       <ProjectPanel reverse
         title="Code Snippets"
         imgSrc="/images/project3.jpg"
-        description="A simple application for making shorter aliases for longer http links."
+        description={t.sections.projects.snippets.description}
         tech={["Next.js", "React", "Supabase", "Tailwind"]}
         links={{ 
           github: "https://github.com/freieslebenadam/shortener", 
@@ -29,7 +30,7 @@ const Projects = () => {
       />
       <ProjectPanel title="Divider"
         imgSrc="/images/project2.jpg"
-        description="A simple application for making shorter aliases for longer http links."
+        description={t.sections.projects.divider.description}
         tech={["Next.js", "React", "Supabase", "Tailwind"]}
         links={{ 
           github: "https://github.com/freieslebenadam/shortener", 

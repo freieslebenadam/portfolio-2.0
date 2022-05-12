@@ -3,5 +3,9 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: ['picsum.photos']
+  },
+  i18n: {
+    locales: [ "en", "cs" ],
+    defaultLocale: "en"
   }
 }
