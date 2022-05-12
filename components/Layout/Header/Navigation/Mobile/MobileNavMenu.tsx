@@ -23,6 +23,7 @@ const MobileNavMenu = ({ items, toggle }: Props) => {
       {items.map(item => (
         <MenuItem item={item} key={item.id} toggle={toggle} />
       ))}
+      <MenuItem cv />
     </motion.ul>
   )
 }

@@ -8,7 +8,7 @@ type Props = {
 
 const DesktopNav = ({ navItems }: Props) => {
   return (
-    <div className='hidden h-full md:block'>
+    <div className='hidden h-full md:block mx-4'>
       <DesktopNavMenu items={navItems} />
     </div>
   )

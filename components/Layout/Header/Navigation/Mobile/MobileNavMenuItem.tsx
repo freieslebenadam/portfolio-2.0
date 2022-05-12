@@ -21,10 +21,25 @@ const variants = {
 }
 
 type Props = {
-  item: INavItem,
-  toggle: () => any
+  item?: INavItem,
+  toggle?: () => any,
+  cv?: boolean
 }
-const MenuItem = ({ item, toggle }: Props) => {
+const MenuItem = ({ item, toggle, cv = false }: Props) => {
+  if (cv) return (
+    <Link href="/cv.pdf" passHref>
+      <motion.li
+        className='font-mono mt-10 cursor-pointer w-max font-medium px-12 ml-4 py-3 rounded border-2 border-primary-400 text-primary-400 hover:bg-primary-400 hover:bg-opacity-10'
+        variants={variants}
+        whileHover={{ x: 5 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        Resume
+      </motion.li>
+    </Link>
+  )
+
+  if (item && toggle)
   return (
     <Link href={item.path} passHref>
       <motion.li
@@ -43,6 +58,8 @@ const MenuItem = ({ item, toggle }: Props) => {
       </motion.li>
     </Link>
   )
+
+  return null
 }
 
 export default MenuItem
