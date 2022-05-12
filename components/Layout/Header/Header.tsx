@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const Header = () =>{
+  // TODO: Make header fixed or hide nav after clicking on link
   return (
     <header className='bg-gradient-to-t from-transparent to-dim-200 px-6 h-24 flex items-center'>
       <div className="flex items-center justify-between flex-auto h-12">
