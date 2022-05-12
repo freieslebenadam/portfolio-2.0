@@ -44,14 +44,11 @@ const MobileNav = ({ navItems }: Props) => {
       ref={containerRef}
     >
       <motion.div 
-        className={classNames(
-          "absolute shadow-xl right-0 top-0 bottom-0 left-0 z-10 transition-backdrop duration-300",
-          isOpen ? "backdrop-blur-sm backdrop-brightness-90" : ""
-        )}
+        className="absolute shadow-xl right-0 top-0 bottom-0 left-0 z-10 h-[100vh] transition-backdrop duration-300"
         variants={sidebar}
       >
-        <div className='absolute right-0 top-0 bottom-0 min-w-[320px] bg-secondary-850'>
-          <MobileNavMenu items={navItems} />
+        <div className='absolute right-0 top-0 bottom-0 max-w-[400px] w-full bg-secondary-850'>
+          <MobileNavMenu items={navItems} toggle={() => toggleOpen()} />
         </div>
       </motion.div>
       <MenuToggle toggle={() => toggleOpen()} />

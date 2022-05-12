@@ -13,6 +13,8 @@ const Layout = ({ children }: ChildrenProps) => {
     >
       <Header />
 
+      <div className='h-24' />
+
       <Main>
         {children}
       </Main>

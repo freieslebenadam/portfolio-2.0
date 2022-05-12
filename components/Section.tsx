@@ -11,7 +11,7 @@ const Section = ({ id, path, title, children }: Props) => {
   return (
     <section id={path} className="w-full pt-48 mb-48">
       <article className='w-full'>
-        <h4 className='capitalize flex items-center font-bold gap-2'>
+        <h4 className='flex items-center font-bold gap-2'>
           <span className='flex-none font-mono text-primary-400 font-medium text-lg'>{id}.</span>
           <span className='flex-none text-2xl font-semibold text-secondary-300'>{title}</span>
           <span className='ml-2 h-[2px] flex-auto bg-secondary-800' />

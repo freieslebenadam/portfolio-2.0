@@ -13,14 +13,15 @@ const variants = {
 }
 
 type Props = {
-  items: INavItem[]
+  items: INavItem[],
+  toggle: () => any
 }
 
-const MobileNavMenu = ({ items }: Props) => {
+const MobileNavMenu = ({ items, toggle }: Props) => {
   return (
     <motion.ul variants={variants} className="aboslute top-0 left-0 h-full right-0 px-10 flex flex-col justify-center gap-5">
       {items.map(item => (
-        <MenuItem item={item} key={item.id} />
+        <MenuItem item={item} key={item.id} toggle={toggle} />
       ))}
     </motion.ul>
   )

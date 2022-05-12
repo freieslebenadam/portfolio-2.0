@@ -15,7 +15,7 @@ const Navigation = () => {
   ]
 
   return (
-    <nav className='px-6'>
+    <nav className=''>
       <DesktopNav navItems={NavItems} />
       <MobileNav navItems={NavItems} />
     </nav>

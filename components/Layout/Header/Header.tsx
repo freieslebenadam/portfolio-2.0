@@ -8,8 +8,9 @@ import { motion } from 'framer-motion'
 const Header = () =>{
   // TODO: Make header fixed or hide nav after clicking on link
   return (
-    <header className='bg-gradient-to-t from-transparent to-dim-200 px-6 h-24 flex items-center'>
-      <div className="flex items-center justify-between flex-auto h-12">
+    <header className='fixed z-50 w-full bg-secondary-900 bg-opacity-90 backdrop-blur-sm px-6 h-24 flex items-center'>
+      <div className='bg-gradient-to-t from-transparent to-dim-200 absolute top-0 left-0 right-0 bottom-0 z-10' />
+      <div className="flex items-center justify-between flex-auto h-12 z-20">
         <div className='flex-none h-full w-12 flex justify-center items-center'>
           <Link href={`/#`}>
             <motion.a 
