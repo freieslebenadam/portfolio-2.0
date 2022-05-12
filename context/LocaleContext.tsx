@@ -1,13 +1,24 @@
 import React, { useState } from 'react'
 import { ChildrenProps } from '@types'
 import { cs, en } from '@lib/lang'
+import { ITranslation } from '@interfaces'
 
 type Locale = "cs" | "en"
 
-export const LocaleContext = React.createContext({})
+interface ILocaleContext {
+  t: ITranslation,
+  setLocaleTo: (locale: Locale) => void
+}
+
+const initialContext: ILocaleContext = {
+  t: en,
+  setLocaleTo: (locale: Locale) => console.log(locale)
+}
+
+export const LocaleContext = React.createContext(initialContext)
 
 const LocaleContextProvider = ({ children }: ChildrenProps) => {
-  const [t, setT] = useState(cs)
+  const [t, setT] = useState(en)
 
   const setLocaleTo = (locale: Locale) => {
     switch (locale) {
