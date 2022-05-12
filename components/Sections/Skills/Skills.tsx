@@ -2,7 +2,7 @@ import Section from '@components/Section'
 import { useLocale } from '@hooks'
 import { ITab } from '@interfaces'
 import React, { useState } from 'react'
-import { SiTypescript, SiHtml5, SiCss3, SiJavascript, SiReact, SiNextdotjs, SiSass, SiTailwindcss, SiGatsby, SiPhp, SiMysql, SiSymfony, SiPostgresql, SiNestjs, SiCsharp, SiNodedotjs, SiNpm, SiComposer, SiGit, SiJirasoftware } from 'react-icons/si'
+import { SiTypescript, SiHtml5, SiCss3, SiJavascript, SiReact, SiNextdotjs, SiSass, SiTailwindcss, SiGatsby, SiPhp, SiMysql, SiSymfony, SiPostgresql, SiNestjs, SiCsharp, SiNodedotjs, SiNpm, SiComposer, SiGit, SiJirasoftware, SiNette, SiDocker } from 'react-icons/si'
 import SkillsTabContext from './SkillsTabContext'
 import SkillsTabs from './SkillsTabs'
 
@@ -37,8 +37,9 @@ const Skills = () => {
         { id: 11, title: "MySQL", icon: <SiMysql /> },
         { id: 12, title: "Symfony", icon: <SiSymfony /> },
         { id: 13, title: "Node.js", icon: <SiNodedotjs /> },
-        { id: 14, title: "Postgres", icon: <SiPostgresql /> },
-        { id: 15, title: "NestJs", icon: <SiNestjs /> },
+        { id: 14, title: "Nette", icon: <SiNette /> },
+        { id: 15, title: "Postgres", icon: <SiPostgresql /> },
+        { id: 16, title: "NestJs", icon: <SiNestjs /> },
       ]
     },
     {
@@ -46,11 +47,12 @@ const Skills = () => {
       name: "other",
       title: t.sections.skills.tabs.other,
       items: [
-        { id: 16, title: "C#", icon: <SiCsharp /> },
-        { id: 17, title: "npm", icon: <SiNpm /> },
-        { id: 18, title: "Composer", icon: <SiComposer /> },
-        { id: 19, title: "Git", icon: <SiGit /> },
-        { id: 20, title: "Jira", icon: <SiJirasoftware /> },
+        { id: 17, title: "C#", icon: <SiCsharp /> },
+        { id: 18, title: "npm", icon: <SiNpm /> },
+        { id: 19, title: "Docker", icon: <SiDocker /> },
+        { id: 20, title: "Composer", icon: <SiComposer /> },
+        { id: 21, title: "Git", icon: <SiGit /> },
+        { id: 22, title: "Jira", icon: <SiJirasoftware /> },
       ]
     }
   ]
