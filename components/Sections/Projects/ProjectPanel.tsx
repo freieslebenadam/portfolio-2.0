@@ -4,6 +4,7 @@ import React from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useLocale } from '@hooks'
 
 type Props = {
   imgSrc: string,
@@ -18,18 +19,20 @@ type Props = {
 }
 
 const ProjectPanel = ({ imgSrc, title, description, tech, links, reverse = false }: Props) => {
+  const {t} = useLocale()
+
   return (
     <div className='relative grid grid-cols-12 gap-2 mb-24 w-full items-center h-[32rem]'>
       <div className={classNames(
         'relative col-start-1 col-end-13 z-20 flex flex-col',
         reverse ? "items-start text-left sm:col-end-9 lg:col-end-7" : "items-end text-right sm:col-start-5 lg:col-start-7"
       )}>
-        <h6 className='text-sm font-mono font-medium text-primary-400 mb-1'>Personal Project</h6>
+        <h6 className='text-sm font-mono font-medium text-primary-400 mb-1'>{t.sections.projects.subtitles}</h6>
         <h5 className='text-secondary-300 font-semibold text-2xl'>{title}</h5>
         <div className='py-5'>
           <p className='px-5 py-10 bg-secondary-850 rounded-md shadow-md font-medium'>{description}</p>
         </div>
-        <ul className='flex gap-5 w-max'>
+        <ul className='flex gap-5 w-max bg-secondary-900 py-2 px-4 rounded'>
           {tech.map((t,index) => <li key={index} className='font-mono text-sm'>{t}</li>)}
         </ul>
         <div className='flex pt-5 gap-5 w-max'>
