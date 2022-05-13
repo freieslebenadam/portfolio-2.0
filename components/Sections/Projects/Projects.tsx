@@ -15,7 +15,7 @@ const Projects = () => {
         tech={["Next.js", "TypeScript", "Supabase", "Tailwind"]}
         links={{ 
           github: "https://github.com/freieslebenadam/shortener", 
-          web: "https://short-me-one.vercel.app/" 
+          web: "https://shortme.tech/" 
         }}
       />
       <ProjectPanel reverse
@@ -25,7 +25,7 @@ const Projects = () => {
         tech={["Next.js", "React", "Contentful", "Tailwind"]}
         links={{ 
           github: "https://github.com/freieslebenadam/shortener", 
-          web: "https://code-snippets-three.vercel.app/" 
+          web: "https://snippets.adamfr.eu/" 
         }}
       />
       <ProjectPanel title="Divider"
@@ -34,7 +34,7 @@ const Projects = () => {
         tech={["Next.js", "React-Context", "Tailwind"]}
         links={{ 
           github: "https://github.com/freieslebenadam/shortener", 
-          web: "https://divider-sable.vercel.app/" 
+          web: "https://divider.adamfr.eu/" 
         }}
       />
     </Section>
