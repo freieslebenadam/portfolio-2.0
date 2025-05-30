@@ -15,7 +15,7 @@ const Projects = () => {
         tech={["Next.js", "TypeScript", "Supabase", "Tailwind"]}
         links={{ 
           github: "https://github.com/freieslebenadam/shortener", 
-          web: "https://shortme.tech/" 
+          web: "https://short-me-one.vercel.app/" 
         }}
       />
       <ProjectPanel reverse
@@ -24,7 +24,7 @@ const Projects = () => {
         description={t.sections.projects.snippets.description}
         tech={["Next.js", "React", "Contentful", "Tailwind"]}
         links={{ 
-          github: "https://github.com/freieslebenadam/shortener", 
+          github: "https://github.com/freieslebenadam/common-code-snippets", 
           web: "https://snippets.adamfr.eu/" 
         }}
       />
@@ -33,7 +33,7 @@ const Projects = () => {
         description={t.sections.projects.divider.description}
         tech={["Next.js", "React-Context", "Tailwind"]}
         links={{ 
-          github: "https://github.com/freieslebenadam/shortener", 
+          github: "https://github.com/freieslebenadam/divider", 
           web: "https://divider.adamfr.eu/" 
         }}
       />
