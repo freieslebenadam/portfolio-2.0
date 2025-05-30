@@ -4,21 +4,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 type Props = {
-  item?: INavItem,
-  cv?: boolean
+  item?: INavItem
 }
 
-const DesktopMenuNavItem = ({ item, cv = false }: Props) => {
-  if (cv) return (
-    <motion.li className='cursor-pointer group select-none' whileHover={{scale:1.02}}>
-      <Link href="/cv.pdf">
-        <a className="border-2 border-primary-400 rounded px-6 py-2 text-primary-400 font-mono font-medium transition-all hover:bg-primary-400 hover:bg-opacity-20">
-          Resume
-        </a>
-      </Link>
-    </motion.li>
-  )
-
+const DesktopMenuNavItem = ({ item }: Props) => {
   if (item)
   return (
     <motion.li className='cursor-pointer group select-none' whileHover={{ y: -3 }}>

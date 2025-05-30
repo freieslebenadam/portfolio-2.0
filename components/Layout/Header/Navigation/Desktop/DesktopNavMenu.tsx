@@ -12,7 +12,6 @@ const DesktopNavMenu = ({ items }: Props) => {
       {items.map(item => (
         <DesktopNavMenuItem key={item.id} item={item} />
       ))}
-      <DesktopNavMenuItem cv />
     </ul>
   )
 }
